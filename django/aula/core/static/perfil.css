@@ -1,0 +1,30 @@
+*{
+    background-color: lightseagreen;
+}
+
+ul{
+    justify-items: center;
+    align-items: center;
+    border: 2px solid orange;
+    width: 150px;
+    padding: 30px;
+    margin: 30px;
+    list-style: none;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+li, input{
+    font-family: Impact;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border-color: orangered;
+}
+
+button{
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    border-color: greenyellow;
+    background: red;
+}

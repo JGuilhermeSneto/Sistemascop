@@ -1,13 +1,33 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Perfil do Usuário</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'perfil.css'%}">
 </head>
 <body>
     <h1>Perfil user</h1>
     <p><a href="{% url 'index' %}">Página Inicial</a></p>
 
+    <ul>
+        <li>Nome: {{ perfil.nome }}
+            <input type="text" name="nome" required>
+        </li>
+        <li>Idade: {{ perfil.idade }}
+            <input type="number" name="idade" required>
+        </li>
+        <li>Email: {{ perfil.email }}
+            <input type="email" name="email" required>
+        </li>
+        <li>CPF: {{ perfil.cpf }}
+            <input type="text" name="cpf" required>
+        </li>
+
+    </ul>
+
+    <button type="submit">Salvar</button>
+    <button type="reset">Cancelar</button>
 </body>
 </html>
