@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado do Quiz</title>
+    <style>
+
+        .certo {
+            color: green;
+            font-weight: bold;
+        }
+        .errado {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Resultado do Quiz</h1>
+    <p>Olá {{ nome }}, veja suas respostas:</p>
+    <ul>
+        {% for msg, status in resultado %}
+            <li class="{{ status }}">{{ msg }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'Cadastro' %}">Tentar novamente</a>
+</body>
+</html>

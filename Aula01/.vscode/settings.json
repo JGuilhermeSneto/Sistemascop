@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "FormsAulas"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

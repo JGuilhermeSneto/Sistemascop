@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Quiz</title>
+</head>
+<body>
+
+    <form action="{% url 'dados' %}" method="post">
+        {% csrf_token %}
+
+        <p>
+            <img src="{% static 'imgs/43.webp' %}" alt="Imagem">
+        </p>
+
+        <p>
+            Nome:
+            <input type="text" name="nome" required>
+        </p>
+
+        <p>Qual o nome desse personagem?</p>
+        <label><input type="radio" name="personagem" value="Rei" required> Rei</label><br>
+        <label><input type="radio" name="personagem" value="Macqueen" required> Macqueen</label><br>
+        <label><input type="radio" name="personagem" value="Sebastião" required> Sebastião</label><br>
+
+        <p>Qual filme ele é personagem?</p>
+        <label>
+            <input type="radio" name="filme" value="Carros" required> Carros
+        </label><br>
+        <label>
+            <input type="radio" name="filme" value="Tarzan" required> Tarzan
+        </label><br>
+        <label>
+            <input type="radio" name="filme" value="Sonic" required> Sonic
+        </label><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

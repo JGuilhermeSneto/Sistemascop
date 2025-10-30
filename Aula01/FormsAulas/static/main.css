@@ -1,0 +1,25 @@
+*{
+    background-color: beige;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form{
+    padding: 40px 30px 40px 360px;
+    border: 20px solid white;
+    border-radius: 30px;
+}
+
+input{
+    width: 70px;
+    border-radius: 20px;
+    background: rgba(165, 137, 137, 0.377);
+    font-family: Impact;
+}
+
+button{
+    margin-top: 40px;
+    border-radius:20px ;
+    color: rgb(119, 63, 119);
+    background-color: cadetblue;
+}
+
