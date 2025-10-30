@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Gerenciar Áreas, Instrutores e Públicos</title>
+</head>
+<body>
+    <h1>Olá</h1>
+
+    <!-- ===== ÁREAS ===== -->
+    <h2>Lista de Áreas</h2>
+    <p><a href="{% url 'Cadastrar_area' %}">Cadastrar nova área</a></p>
+
+    {% for area in areas %}
+        <p>
+            {{ area.nome }}
+            | <a href="{% url 'AreaEditar' area.id %}">Editar</a>
+            | <a href="{% url 'AreaRemover' area.id %}">Remover</a>
+        </p>
+    {% empty %}
+        <p>Nenhuma área cadastrada</p>
+    {% endfor %}
+
+    <hr>
+
+    <!-- ===== INSTRUTORES ===== -->
+    <h2>Lista de Instrutores</h2>
+    <p><a href="{% url 'CadastrarInstrutor' %}">Cadastrar novo instrutor</a></p>
+
+    {% for instrutor in instrutores %}
+        <p>
+            {{ instrutor.nome }}
+            | <a href="{% url 'InstrutorEditar' instrutor.id %}">Editar</a>
+            | <a href="{% url 'InstrutorRemover' instrutor.id %}">Remover</a>
+        </p>
+    {% empty %}
+        <p>Nenhum instrutor cadastrado</p>
+    {% endfor %}
+
+    <hr>
+
+    <!-- ===== PÚBLICOS ===== -->
+    <h2>Lista de Públicos</h2>
+    <p><a href="{% url 'CadastrarPublico' %}">Cadastrar novo público</a></p>
+
+    {% for publico in publicos %}
+    <p>
+        {{ publico.nome }}
+        | <a href="{% url 'PublicoEditar' publico.pk %}">Editar</a>
+        | <a href="{% url 'PublicoRemover' publico.pk %}">Remover</a>
+    </p>
+{% empty %}
+    <p>Nenhum público cadastrado.</p>
+{% endfor %}    
+
+
+    <h1>
+        <a href="{% url 'index'%}">Voltar</a>
+    </h1>
+</body>
+</html>
